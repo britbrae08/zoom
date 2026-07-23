@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thank You | Zoom Bible Study</title>
+  <meta name="description" content="Thank you for requesting the free Steps to Christ ebook and Zoom Bible discussion invitation.">
+  <meta name="theme-color" content="#011C45">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <main class="thank-you-shell">
+    <section class="thank-you-card">
+      <div class="mark-box"><img src="assets/logo-mark.png" width="130" height="94" alt="Zoom Bible Study"></div>
+      <p class="eyebrow eyebrow-light" style="justify-content:center"><span></span>You’re all set<span></span></p>
+      <h1>Your journey has begun.</h1>
+      <p>Please check your inbox for your free copy of <em>Steps to Christ</em> and information about the next live Zoom Bible discussion.</p>
+      <div class="thank-you-links">
+        <a class="button button-primary hidden" href="#" data-ebook-link>Open the ebook</a>
+        <a class="button button-ghost hidden" href="#" data-zoom-link>View Zoom details</a>
+        <a class="button button-ghost" href="index.html">Return home</a>
+      </div>
+    </section>
+  </main>
+  <script src="assets/config.js"></script>
+  <script>
+    (() => {
+      const ebookLink = document.querySelector('[data-ebook-link]');
+      const zoomLink = document.querySelector('[data-zoom-link]');
+      const config = window.ZBS_CONFIG || {};
+      if (config.ebookUrl) { ebookLink.href = config.ebookUrl; ebookLink.classList.remove('hidden'); }
+      if (config.zoomUrl) { zoomLink.href = config.zoomUrl; zoomLink.classList.remove('hidden'); }
+    })();
+  </script>
+</body>
+</html>
